@@ -1,0 +1,135 @@
+{
+  "layer": "top",
+  "position": "top",
+  "margin-left": 10,
+  "margin-right": 10,
+  "margin-top": 7,
+  "exclusive": true,
+  "gtk-layer-shell": true,
+  "reload_style_on_change": true,
+
+  "modules-left": [
+    "custom/smallspacer",
+    "custom/spacer",
+    "ext/workspaces",
+    "custom/spacer",
+    "custom/spacer"
+  ],
+
+  "modules-center": [
+    "custom/padd",
+    "custom/l_end",
+    "custom/r_end",
+    "dwl/window",
+    "custom/padd"
+  ],
+
+  "modules-right": [
+    "custom/cava",
+    "custom/padd",
+    "pulseaudio",
+    "custom/padd",
+    "battery",
+    "custom/padd",
+    "group/expand",
+    "clock",
+    "custom/padd"
+  ],
+
+  "ext/workspaces": {
+    "format": "{icon}",
+    "ignore-hidden": true,
+    "on-click": "activate",
+    "on-click-right": "deactivate",
+    "sort-by-id": true,
+    "format-icons": {
+      "default": "",
+      "active": ""
+    }
+  },
+
+  "dwl/window": {
+    "format": "{title}",
+    "max-length": 80
+  },
+
+  "custom/eye": {
+    "format": "",
+    "on-click": "~/.config/waybar/scripts/toggle-music.sh"
+  },
+
+  "custom/smallspacer": {
+    "format": " "
+  },
+
+  "custom/spacer": {
+    "format": ""
+  },
+
+  "clock": {
+    "format": "{:%H:%M}"
+  },
+
+  "custom/music": {
+    "exec": "~/.config/waybar/scripts/music.sh",
+    "interval": 2,
+    "signal": 8
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": " muted",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol",
+    "tooltip": true
+  },
+
+  "group/expand": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 300
+    },
+    "modules": ["tray"]
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 5
+  },
+
+  "battery": {
+    "interval": 5,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip": true
+  },
+
+  "custom/notification": {
+    "format": "",
+    "tooltip": false
+  },
+
+  "custom/padd": {
+    "format": "  "
+  },
+  "custom/cava": {
+    "exec": "~/.config/waybar/scripts/cava.sh",
+    "return-type": "raw",
+    "format": "{}"
+},
+  "custom/l_end": {
+    "format": " "
+  },
+
+  "custom/r_end": {
+    "format": " "
+  }
+}

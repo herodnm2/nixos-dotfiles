@@ -1,0 +1,80 @@
+@import "~/.config/rofi/colors/matugen.rasi"
+
+configuration {
+    show-icons: true;
+}
+
+* {
+    background-color: @background;
+    text-color: @foreground;
+}
+
+prompt {
+    enabled: false;
+}
+
+window {
+    location: center;
+    anchor: center;
+
+    width: 1000;
+
+    border: 2;
+    border-radius: 16;
+    border-color: @border;
+
+    background-color: @background;
+}
+
+mainbox {
+    spacing: 10;
+    padding: 20;
+}
+
+inputbar {
+    background-color: @background;
+    text-color: @foreground;
+}
+
+entry {
+    background-color: @background;
+    text-color: @foreground;
+}
+
+listview {
+    layout: vertical;
+
+    lines: 1;
+    columns: 6;
+
+    spacing: 15;
+
+    scrollbar: false;
+}
+
+element {
+    orientation: vertical;
+
+    padding: 10;
+
+    border-radius: 12;
+
+    background-color: @background-alt;
+    text-color: @foreground;
+}
+
+element normal.normal {
+    background-color: @background-alt;
+    text-color: @foreground;
+}
+
+element selected.normal {
+    background-color: @selected;
+    text-color: @background;
+}
+
+element-icon {
+    size: 300;
+
+    background-color: transparent;
+}

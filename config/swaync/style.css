@@ -1,0 +1,281 @@
+@import url("/home/clevex/.cache/waybar/colors.css");
+
+/* ==================================================================
+   SwayNC + Matugen
+   ================================================================== */
+
+/* ── Palette ─────────────────────────────────────────────────────── */
+
+@define-color theme_fg @foreground;
+@define-color theme_fg_secondary alpha(@foreground, 0.75);
+
+@define-color theme_bg alpha(@background, 0.85);
+@define-color popup_bg alpha(@surface, 0.92);
+
+@define-color module_bg alpha(@surface, 0.65);
+@define-color module_hover_bg alpha(@primary, 0.20);
+
+@define-color button_bg alpha(@primary, 0.16);
+@define-color button_hover_bg alpha(@primary, 0.30);
+
+@define-color accent_color @primary;
+@define-color accent_color_hover @secondary;
+
+@define-color border_light alpha(@primary, 0.35);
+@define-color border_dark alpha(black, 0.12);
+@define-color border_medium alpha(@primary, 0.20);
+
+@define-color icon_primary @foreground;
+@define-color icon_secondary alpha(@foreground, 0.75);
+
+@define-color slider_trough_bg alpha(@foreground, 0.15);
+@define-color slider_thumb_bg white;
+
+@define-color close_button_bg alpha(@foreground, 0.10);
+@define-color close_button_hover_bg alpha(@foreground, 0.20);
+
+@define-color mpris_player_bg alpha(@surface, 0.75);
+
+/* ── Base ────────────────────────────────────────────────────────── */
+
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 15px;
+  color: @theme_fg;
+
+  border: none;
+  border-radius: 0;
+  background: none;
+
+  padding: 0;
+  margin: 0;
+
+  box-shadow: none;
+  text-shadow: none;
+  outline: none;
+
+  transition: all 0.2s ease;
+}
+
+/* ── Control Center ─────────────────────────────────────────────── */
+
+.control-center {
+  background-color: @theme_bg;
+
+  border: 2px solid @border_medium;
+  border-radius: 18px;
+
+  padding: 22px;
+  min-width: 380px;
+}
+
+/* ── Widgets ────────────────────────────────────────────────────── */
+
+.widget-mpris,
+.widget-volume,
+.widget-backlight,
+.widget-buttons-grid,
+.control-center-list > box > *:not(.widget-title) {
+
+  background-color: @module_bg;
+
+  border-radius: 18px;
+
+  padding: 18px;
+  margin-bottom: 14px;
+
+  border: 1px solid @border_medium;
+}
+
+/* ── Widget Titles ─────────────────────────────────────────────── */
+
+.widget-title {
+  padding: 4px 6px 12px 6px;
+}
+
+.widget-title label {
+  font-size: 16px;
+  font-weight: 600;
+
+  color: @theme_fg_secondary;
+}
+
+.widget-title button {
+  font-size: 14px;
+
+  color: @theme_fg;
+
+  background-color: @button_bg;
+
+  border-radius: 10px;
+
+  padding: 7px 16px;
+}
+
+.widget-title button:hover {
+  background-color: @button_hover_bg;
+}
+
+/* ── MPRIS ──────────────────────────────────────────────────────── */
+
+.widget-mpris {
+  padding: 0;
+  border: none;
+
+  background: transparent;
+}
+
+.widget-mpris-player {
+  background-color: @mpris_player_bg;
+
+  border-radius: 18px;
+
+  padding: 16px;
+
+  border: 1px solid @border_medium;
+}
+
+.widget-mpris-title {
+  font-size: 18px;
+  font-weight: 700;
+
+  color: @theme_fg;
+}
+
+.widget-mpris-subtitle {
+  font-size: 14px;
+
+  color: @theme_fg_secondary;
+}
+
+.widget-mpris button {
+  border-radius: 50%;
+
+  padding: 7px;
+
+  color: @icon_secondary;
+}
+
+.widget-mpris button:hover {
+  background-color: @button_hover_bg;
+
+  color: @icon_primary;
+}
+
+/* ── Sliders ───────────────────────────────────────────────────── */
+
+scale trough {
+  min-height: 12px;
+
+  border-radius: 10px;
+
+  background-color: @slider_trough_bg;
+}
+
+scale trough progress {
+  min-height: 12px;
+
+  border-radius: 10px;
+
+  background-color: @accent_color;
+}
+
+scale slider {
+  min-width: 14px;
+  min-height: 14px;
+
+  border-radius: 50%;
+
+  background-color: @slider_thumb_bg;
+}
+
+/* ── Buttons Grid ──────────────────────────────────────────────── */
+
+.widget-buttons-grid button {
+  background-color: @button_bg;
+
+  border-radius: 999px;
+
+  padding: 14px;
+
+  color: @icon_secondary;
+}
+
+.widget-buttons-grid button:hover {
+  background-color: @button_hover_bg;
+
+  color: @icon_primary;
+}
+
+.widget-buttons-grid button.toggle:checked {
+  background-color: @accent_color;
+
+  color: white;
+}
+
+/* ── Notifications ─────────────────────────────────────────────── */
+
+.notification-background {
+  background-color: @module_bg;
+
+  border-radius: 18px;
+
+  border: 1px solid @border_medium;
+
+  padding: 16px;
+}
+
+.notification-row:hover .notification-background {
+  background-color: @module_hover_bg;
+}
+
+.notification .summary {
+  font-weight: 700;
+
+  color: @theme_fg;
+}
+
+.notification .body {
+  color: @theme_fg_secondary;
+}
+
+.notification .time {
+  font-size: 13px;
+
+  color: @theme_fg_secondary;
+}
+
+.notification image {
+  border-radius: 12px;
+
+  margin-right: 12px;
+}
+
+/* ── Floating Notifications ────────────────────────────────────── */
+
+.floating-notifications .notification-background {
+  background-color: @popup_bg;
+
+  border: 1px solid @border_medium;
+
+  border-radius: 18px;
+
+  padding: 18px;
+
+  margin: 8px 14px;
+}
+
+/* ── Close Button ──────────────────────────────────────────────── */
+
+.close-button {
+  background-color: @close_button_bg;
+
+  border-radius: 50%;
+
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.close-button:hover {
+  background-color: @close_button_hover_bg;
+}

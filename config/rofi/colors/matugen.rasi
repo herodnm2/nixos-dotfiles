@@ -1,0 +1,14 @@
+* {
+    background: #11140e;
+    background-alt: #1d211a;
+
+    foreground: #e1e4d9;
+
+    selected: #aad290;
+
+    active: #bdcbaf;
+
+    urgent: #ffb4ab;
+
+    border: #aad290;
+}

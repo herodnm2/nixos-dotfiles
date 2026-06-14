@@ -1,0 +1,17 @@
+/* Kitty Dark (Green Void Style) for Rofi */
+
+* {
+    background:        #121212;   /* почти чёрный */
+    background-alt:    #444444;   /* чуть светлее */
+
+    foreground:        #c5c8c6;   /* мягкий серый */
+
+    selected:          #ffffff;   /* основной зелёный (акцент) */
+    active:            #6b8f5a;   /* более тёмный зелёный */
+    urgent:            #a35f5f;   /* приглушённый красный */
+
+    border:            #444444;
+
+    /* дополнительные */
+    accent:            #8fbf7f;
+}

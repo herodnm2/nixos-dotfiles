@@ -1,0 +1,19 @@
+@define-color background #1a120e;
+@define-color foreground #f0dfd8;
+@define-color primary #ffb692;
+
+.notification-row {
+  background: @background;
+  color: @foreground;
+}
+
+.notification {
+  background: @background;
+  color: @foreground;
+  border: 2px solid @primary;
+}
+
+.control-center {
+  background: @background;
+  color: @foreground;
+}
