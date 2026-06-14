@@ -18,5 +18,7 @@ Copy user configs:
 
 ```bash
 cp -r .config/* ~/.config/
+cp -r wallpapers ~
+cp -r wallpaper.sh ~
 ```
 > Replace hardware-configuration.nix with your own before rebuilding.
