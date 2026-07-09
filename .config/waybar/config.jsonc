@@ -20,7 +20,7 @@
     "custom/padd",
     "custom/l_end",
     "custom/r_end",
-    "dwl/window",
+    "mango/window",
     "custom/padd"
   ],
 
@@ -48,7 +48,7 @@
     }
   },
 
-  "dwl/window": {
+  "mango/window": {
     "format": "{title}",
     "max-length": 80
   },
